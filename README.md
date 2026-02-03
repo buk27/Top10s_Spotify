@@ -13,20 +13,23 @@ The dataset contains the top trending songs on Spotify from 2010 to 2019, includ
 ### 1. Music is Getting "Sadder"
 The analysis revealed a statistically significant decrease in **Valence** (emotional positivity) over the decade (p-value: 0.0027). This suggests a shift toward less positive-sounding hits in the late 2010s.
 
-![Valence Trend Over Time](plots/valence_over_time.png)
-*Caption: Linear regression showing the decline of Valence scores from 2010 to 2019.*
+![Valence Trend Over Time](plots/valence_over_years.png)
+
+*Linear regression showing the decline of Valence scores from 2010 to 2019*
 
 ### 2. Mood by Genre
 By analyzing valence across different styles, it is clear that genre significantly influences a song's emotional tone. "Pop" and "Latin" genres tend to have higher median valence compared to others.
 
 ![Valence by Genre](plots/valence_by_genre.png)
-*Caption: Comparison of Valence scores across different musical genres, ordered by median value.*
+
+*Comparison of Valence scores across different musical genres, ordered by median value*
 
 ### 3. Tempo (BPM) Trends
 There was a small but statistically significant downward trend in tempo (BPM) throughout the years (Coefficient: -0.9915, p-value: 0.0104).
 
 ![BPM Boxplot](plots/bpm_boxplot.png)
-*Caption: Distribution of Beats Per Minute (BPM) across the decade.*
+
+*Distribution of Beats Per Minute (BPM) across the decade*
 
 ## Tech Stack
 * **Language:** R
