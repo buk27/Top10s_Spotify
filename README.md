@@ -1,7 +1,48 @@
-# Top10s_Spotify
-#R analysis of Top10s Spotify dataset
+# Spotify Top Songs Analysis (2010–2019)
+### Investigating Trends in Tempo, Mood, and Genre
 
-https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-year
+## Project Overview
+This project explores how the musical characteristics of top-charting Spotify songs evolved over a decade. Using a dataset of 603 tracks, I applied linear and multiple regression models in R to test whether popular music is becoming slower or "sadder" over time.
+
+## Data Source
+The dataset contains the top trending songs on Spotify from 2010 to 2019, including variables such as BPM (tempo), energy, danceability, and valence (emotional positivity).
+* **Source:** [Kaggle - Top Spotify Songs 2010-2019](https://www.kaggle.com/datasets/leonardopena/top-spotify-songs-from-20102019-by-year)
+
+## Key Research Findings
+
+### 1. Music is Getting "Sadder"
+The analysis revealed a statistically significant decrease in **Valence** (emotional positivity) over the decade (p-value: 0.0027). This suggests a shift toward less positive-sounding hits in the late 2010s.
+
+![Valence Trend Over Time](plots/valence_over_time.png)
+*Caption: Linear regression showing the decline of Valence scores from 2010 to 2019.*
+
+### 2. Mood by Genre
+By analyzing valence across different styles, it is clear that genre significantly influences a song's emotional tone. "Pop" and "Latin" genres tend to have higher median valence compared to others.
+
+![Valence by Genre](plots/valence_by_genre.png)
+*Caption: Comparison of Valence scores across different musical genres, ordered by median value.*
+
+### 3. Tempo (BPM) Trends
+There was a small but statistically significant downward trend in tempo (BPM) throughout the years (Coefficient: -0.9915, p-value: 0.0104).
+
+![BPM Boxplot](plots/bpm_boxplot.png)
+*Caption: Distribution of Beats Per Minute (BPM) across the decade.*
+
+## Tech Stack
+* **Language:** R
+* **Core Libraries:** `tidyverse`, `dplyr`, `ggplot2`, `knitr`, `stringr`
+* **Methods:** Descriptive Statistics, Simple Linear Regression, Multiple Linear Regression.
+
+## How to Run
+This project was developed in R. To reproduce the analysis:
+1. Clone the repository.
+2. Ensure `top10s.csv` is in the working directory.
+3. Run the `Spotify_Analysis.R` script.
+
+## Repository Structure
+* `top10s.csv`: The raw dataset.
+* `R_project.R`: The full R script containing data cleaning and modeling.
+* `/plots`: Visualizations exported from the analysis.
 
 #Results
 This project explores how musical characteristics of top Spotify songs have evolved between 2010 and 2019. The dataset includes the top trending songs for each year, along with features such as tempo (BPM), mood (valence), danceability, energy, acousticness, and genre. 
